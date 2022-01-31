@@ -3,4 +3,4 @@ const inputData = fs.readFileSync('/dev/stdin').toString().split(' ').map(value 
 
 const[a, b] = inputData
 
-console.log(a+b);
+console.log(a+b); 
