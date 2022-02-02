@@ -14,5 +14,6 @@ else if(79 >= a && a >= 70){
 else if(69 >= a && a >= 60){
     console.log('D')
 }
-else{
+else {
     console.log('F')
+}
