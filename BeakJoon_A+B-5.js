@@ -1,6 +1,5 @@
 let fs = require('fs');
 let input = fs.readFileSync('/dev/stdin').toString().split('\n');
-let answer = '';
 let i = 0;
 
 while(true){
