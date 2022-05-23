@@ -1,1 +1,1 @@
-  console.log(fixed);
+return triangle[0][0]
