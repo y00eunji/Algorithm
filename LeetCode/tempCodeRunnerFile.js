@@ -1,1 +1,1 @@
-return triangle[0][0]
+1
