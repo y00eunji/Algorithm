@@ -1,1 +1,1 @@
-1
+  return product - sum;
