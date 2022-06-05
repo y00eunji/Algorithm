@@ -2,17 +2,19 @@
 1309. Decrypt String from Alphabet to Integer Mapping
 문자열
 */
-var freqAlphabets = function (s) {
-  s = [...s];
-  for (let i = s.length - 1; i >= 0; i--) {
-    let num = s[i];
-    if (num !== "#") {
-      s[i] = String.fromCharCode(Number(num) + 96);
-    } else {
-      let letter = String.fromCharCode(Number(s[i - 2] + s[i - 1]) + 96);
-      s.splice(i - 2, 3, letter);
-    }
+var freqAlphabets = function(s) {
+  let answer = ''; 
+  
+  for (let i = 0; i < s.length; i++) {
+      let num = s[i];
+      
+      if (s[i + 2] === '#') {
+          num = s.slice(i, i + 2);
+          i += 2;
+      }
+          
+      answer += String.fromCharCode(parseInt(num) + 96);
   }
-  return s;
+  
+  return answer;
 };
-console.log(freqAlphabets("1326#"));
