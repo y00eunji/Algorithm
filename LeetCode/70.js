@@ -3,6 +3,7 @@
 문제
 정상까지의 계단이 n개 있다.
 한 번에 1 또는 2 계단을 오를 수 있다. 정상까지 오를 수 있는 방법을 구해라
+https://youtu.be/Y0lT9Fck7qI
  */
 
 var climbStairs = function (n) {
