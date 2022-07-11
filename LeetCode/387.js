@@ -15,5 +15,6 @@ var firstUniqChar = function (s) {
       return s.indexOf(str[0]);
     }
   }
+  return -1;
 };
 console.log(firstUniqChar((s = "loveleetcode")));
