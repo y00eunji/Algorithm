@@ -28,4 +28,4 @@ function homogeneous(N, M) {
 for (let i = 1; i <= count; i++) {
   const args = input[i].split(" ");
   console.log(homogeneous(Number(args[0]), Number(args[1])));
-}
+} 
