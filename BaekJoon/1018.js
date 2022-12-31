@@ -45,4 +45,4 @@ function search(isB, i, j, board) {
   }
 
   return changes;
-}
+} 
