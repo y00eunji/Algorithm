@@ -10,7 +10,7 @@ const ds = [
   [0, 1],
   [0, -1],
 ];
-
+ 
 function bfs(startX, startY) {
   //시작 좌표 기준으로 시작
   const queue = [[startX, startY]];
