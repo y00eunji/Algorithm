@@ -24,6 +24,6 @@ function solution(n, lost, reserve) {
     }
     let count = arr.filter(el => el >= 0).length
     return count
-
+ 
 
 }
