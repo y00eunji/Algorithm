@@ -12,13 +12,17 @@ let right = M - 1;
 let move = 0;
 
 for (let i = 0; i < position.length; i++) {
-  if (left <= position[i] && position <= right) continue;
+  // 바구니 안에 떨어지는 경우
+  if (left <= position[i] && position[i] <= right) continue;
 
+  //  바구니 왼쪽 가깝게 떨어지는 경우
   if (left > position[i]) {
     move += left - position[i];
     right -= left - position[i];
     left = position[i];
-  } else {
+  }
+  // 바구니 오른쪽에 가깝게 떨어지는 경우
+  else {
     move += position[i] - right;
     left += position[i] - right;
     right = position[i];
