@@ -1,12 +1,12 @@
 /*
- 제귀 종료 조건 : 길이가 M일때 종료 + 이미 들어가있는 조합 배열마지막 요소가 새로 들어갈 요소보다 크면 종료
+ 재귀 종료 조건 : 길이가 M일때 종료 + 이미 들어가있는 조합 배열마지막 요소가 새로 들어갈 요소보다 크면 종료
  */
 
-const [N, M] = require("fs")
-  .readFileSync(process.platform === "linux" ? "/dev/stdin" : "./input.txt")
+const [N, M] = require('fs')
+  .readFileSync(process.platform === 'linux' ? '/dev/stdin' : './input.txt')
   .toString()
   .trim()
-  .split(" ")
+  .split(' ')
   .map((v) => +v);
 
 // const N = 4;
@@ -18,7 +18,7 @@ const visited = Array.from({ length: N }, () => false);
 
 const getCombinations = (arr, M, combination) => {
   if (combination.length === M) {
-    answer.push(combination.join(" "));
+    answer.push(combination.join(' '));
     return;
   }
 
@@ -34,4 +34,4 @@ const getCombinations = (arr, M, combination) => {
 };
 getCombinations(array, M, []);
 
-console.log(answer.join("\n"));
+console.log(answer.join('\n'));
