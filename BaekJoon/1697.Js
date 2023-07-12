@@ -10,7 +10,7 @@ const visited = new Array(100001).fill(false);
 const bfs = (start) => {
   const queue = [];
   queue.push([start, 0]);
-  visited[start] = 1;
+  visited[start] = true;
 
   while (queue.length) {
     for (let i = 0; i < queue.length; i++) {
@@ -29,4 +29,4 @@ const bfs = (start) => {
   }
 };
 
-console.log(bfs(+N));
+console.log(bfs(N));
