@@ -4,7 +4,6 @@ const INPUT = require('fs')
   .trim()
   .split('\n');
 
-// 주사위 횟수 저장
 const graph = Array(101).fill(Infinity);
 graph[1] = 0;
 
@@ -16,12 +15,12 @@ for (let i = 1; i < INPUT.length; i++) {
 }
 
 const queue = [];
-
 queue.push({ pos: 1, cnt: 0 });
 
 while (queue.length) {
   const { pos, cnt } = queue.shift();
 
+  // map에 있는 경우
   if (map.has(pos)) {
     const next = map.get(pos);
 
@@ -33,6 +32,7 @@ while (queue.length) {
     continue;
   }
 
+  // map에 없는 경우 주사위 굴리기
   for (let i = 1; i <= 6; i++) {
     const next = pos + i;
 
