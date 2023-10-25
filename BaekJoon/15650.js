@@ -9,9 +9,6 @@ const [N, M] = require('fs')
   .split(' ')
   .map((v) => +v);
 
-// const N = 4;
-// const M = 3;
-
 const answer = [];
 const array = Array.from({ length: N }, (_, i) => i + 1);
 const visited = Array.from({ length: N }, () => false);
