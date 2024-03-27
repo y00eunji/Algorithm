@@ -22,3 +22,31 @@ var numSubarrayProductLessThanK = function (nums, k) {
   }
   return count;
 };
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var numSubarrayProductLessThanK = function (nums, k) {
+  var Product = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    var Current = nums[i];
+
+    if (Current < k) {
+      Product++;
+
+      for (let j = i + 1; j < nums.length; j++) {
+        Current = Current * nums[j];
+        if (Current > k) {
+          break;
+        }
+        if (Current < k) {
+          Product++;
+        }
+      }
+    }
+  }
+  return Product;
+};
